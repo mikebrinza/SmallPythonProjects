@@ -1,6 +1,4 @@
 # SmallPythonProjects
-small apps and games for learning python and whatnots.
-you can find them on the following branches:
-1. gameSimpleRPS - test your luck on a simple Rock, Paper, Scissors game against the AI
-2. gameGuessTheNumber - guess the AI's number in 7 tries or your worst nightmare will come to life
-3. gameHangMan - a simple guess the word similar to Hangman game
+Small apps and games for learning python and whatnots.
+The code and data used is provided with educational purpose intent. 
+I am not responsible for any misuse of any of the apps.
