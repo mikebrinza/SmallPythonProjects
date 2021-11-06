@@ -15,7 +15,6 @@ def alarm(setAlarmTimer):
         if nowTime == setAlarmTimer:
             print("Alarm: ")
             newLabel = Label(clock, text = "Alarm triggered",fg="yellow",bg="black",font=("Arial",12,"bold")).place(x = 110,y=130)
-           
             winsound.PlaySound("sound.wav",winsound.SND_ASYNC)
             break
 
@@ -30,8 +29,10 @@ clock.title("My Alarm Clock")
 clock.geometry("400x200")
 time_format = Label(clock, text= "Enter time in 24 hour format!",font="Arial").place(x=60,y=150)
 addTime = Label(clock,text = "Hour   Min    Sec",font=60).place(x = 110, y=0)
-currentTimeLabel = Label(clock, text = "Current time: ",font=("Arial",12,"bold")).place(x=0, y=30)
-currentTime = Label(clock, text = datetime.datetime.now().strftime("%H:%M:%S"),font=("Arial",12,)).place(x=100, y=30)
+#TODO
+# update current time every second
+# currentTimeLabel = Label(clock, text = "Current time: ",font=("Arial",12,"bold")).place(x=0, y=30)
+#currentTime = Label(clock, text = datetime.datetime.now().strftime("%H:%M:%S"),font=("Arial",12,)).place(x=100, y=30)
 setYourAlarm = Label(clock,text = "Alarm time: ",font=("Arial",12,"bold")).place(x=0, y=60)
 
 # The Variables we require to set the alarm(initialization):
