@@ -2,6 +2,7 @@
 #using an extension of your choice to a specified Destination folder.
 
 import os
+from random import randint
 import shutil
 from tkinter import *
 from tkinter import filedialog
@@ -34,12 +35,13 @@ def main():
         for name in files:
             if name.endswith(fileExtension):
                 try:
-                    filePath = root + os.sep + name
+                    filePath = os.path.join(root,name)
                     filePathDestination = srcDest + os.sep + name
                     shutil.move(filePath, filePathDestination)
                     print("Successfully moved: ", name)
-                except UnicodeEncodeError:
+                except:
                     print("-----------------Error")
+                    
 
 def askMsg(message: str):
     response = messagebox.askokcancel('information', message)
@@ -48,6 +50,8 @@ def askMsg(message: str):
 
 def askString():
     response = simpledialog.askstring("Extension Name", 'Enter extension name (including "."): ',parent = ws)
+    if (response == False):
+        exit()
     return response
 
 
